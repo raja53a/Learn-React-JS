@@ -1,0 +1,76 @@
+/* Light mode (default) */
+body.light-mode {
+  background-color: #f0f0f0; /* Light background */
+  color: #000; /* Dark text */
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.toggle-switch {
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-on {
+  background-color: #4caf50;
+}
+
+.toggle-off {
+  background-color: #ccc;
+}
+
+.switch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: transform 0.3s linear, background-color 0.3s linear;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.on {
+  background-color: #4caf50;
+  transform: translateX(50px);
+}
+
+.off {
+  background-color: #f44336;
+  transform: translateX(0);
+}
+
+.switch-state {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
