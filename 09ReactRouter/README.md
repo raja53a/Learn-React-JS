@@ -24,5 +24,5 @@ A React application that allows users to navigate between pages and view GitHub 
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/your-username/github-profile-viewer.git](https://github.com/raja53a/Learn-React-JS.git)
+   git clone https://github.com/raja53a/Learn-React-JS.git
    ```
