@@ -1,8 +1,60 @@
-# React + Vite
+# Pokemon Project Base Code here -
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Pokemon.jsx
 
-Currently, two official plugins are available:
+```javascript
+<section className="container">
+  <header>
+    <h1> Lets Catch Pokémon</h1>
+  </header>
+  <div className="pokemon-search">
+    <input type="text" placeholder="search Pokemon" />
+  </div>
+  <div>
+    <ul className="cards">
+      <PokemonCards />
+    </ul>
+  </div>
+</section>
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## PokemonCards.jsx
+
+```javascript
+<li className="pokemon-card">
+  <figure>
+    <img src="" className="pokemon-image" />
+  </figure>
+  <h1 className="pokemon-name">Name</h1>
+  <div className="pokemon-info pokemon-highlight">
+    <p>Types</p>
+  </div>
+
+  <div className="grid-three-cols">
+    <p className="pokemon-info">
+      <span> Height:</span> 43
+    </p>
+    <p className="pokemon-info">
+      <span> Weight:</span> 67
+    </p>
+    <p className="pokemon-info">
+      <span> speed:</span> 22
+    </p>
+  </div>
+
+  <div className="grid-three-cols">
+    <div className="pokemon-info">
+      <p>23</p>
+      <span> Experience:</span>
+    </div>
+    <div className="pokemon-info">
+      <p>45</p>
+      <span>Attack:</span>
+    </div>
+    <div className="pokemon-info">
+      <p>Fire</p>
+      <span> Abilities: </span>
+    </div>
+  </div>
+</li>
+```
