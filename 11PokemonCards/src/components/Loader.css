@@ -1,0 +1,97 @@
+/* Loader Container */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Light overlay to make it stand out */
+  z-index: 9999; /* Ensures it's on top of other content */
+  overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+/* Text Style */
+.loader-text {
+  color: #d20c0c; /* Text color */
+  animation: text_713 3.5s ease-in-out infinite;
+  font-size: 2.5rem; /* Increased text size */
+  letter-spacing: 2px;
+  margin-right: 1rem; /* Space between text and loader */
+}
+
+/* Loader Ball */
+.load {
+  background-color: #d20c0c; /* Ball color */
+  border-radius: 50%;
+  height: 32px; /* Increased size */
+  width: 32px; /* Increased size */
+  position: relative;
+  animation: loading_713 3.5s ease-in-out infinite;
+}
+
+/* Ball's before pseudo-element */
+.load::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #d20c0c; /* Ball's color matching the main ball */
+  border-radius: inherit;
+  animation: loading2_713 3.5s ease-in-out infinite;
+}
+
+/* Keyframes for Text Animation */
+@keyframes text_713 {
+  0% {
+    letter-spacing: 2px;
+    transform: translateX(0);
+  }
+  40% {
+    letter-spacing: 4px;
+    transform: translateX(10px);
+  }
+  80% {
+    letter-spacing: 2px;
+    transform: translateX(20px);
+  }
+  100% {
+    letter-spacing: 2px;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for Loader Ball Animation */
+@keyframes loading_713 {
+  0% {
+    transform: translateX(0);
+    width: 32px;
+  }
+  50% {
+    transform: translateX(60px);
+    width: 32px;
+  }
+  100% {
+    transform: translateX(0);
+    width: 32px;
+  }
+}
+
+@keyframes loading2_713 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
